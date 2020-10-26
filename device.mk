@@ -41,7 +41,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     mobicore.rc \
-    wifi_device.rc
+    init.wifi_device.rc
 
 # Wifi
 PRODUCT_PACKAGES += \
