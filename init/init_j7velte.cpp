@@ -107,7 +107,8 @@ void vendor_load_properties()
     }
 
     /* Common properties*/
-    property_override("ro.build.description", "samsung/j7veltedx/j7velte:9/PPR1.180610.011/J701FDDU8CTA3:user/release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys");
+    property_override("ro.build.description", "samsung/j7veltexc/j7velte:8.0.0/R16NW/J600FLXXS5CSL5:user/release-keys");
     property_override_quad("ro.product.device", "ro.product.odm.device", "ro.product.system.device", "ro.product.vendor.device", "j7velte");
 
     std::string device = GetProperty("ro.product.device", "");
