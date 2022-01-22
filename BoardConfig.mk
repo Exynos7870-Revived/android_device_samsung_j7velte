@@ -18,6 +18,9 @@ DEVICE_PATH := device/samsung/j7velte
 # Audio
 BOARD_USE_TFA_AMP := true
 
+# Display
+TARGET_SCREEN_DENSITY := 320
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j7velte,j7veltedx,j7veltedd,j7veltekk
 
