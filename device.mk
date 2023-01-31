@@ -53,7 +53,7 @@ PRODUCT_PACKAGES += \
   android.hardware.bluetooth.a2dp@1.0-service
 
 # Tests
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES_ENG += \
   QSensorTest
 
 # Fingerprint
