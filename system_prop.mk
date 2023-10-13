@@ -23,7 +23,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.display-size=1280x720
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.multisim.simslotcount=1
+    ro.vendor.multisim.simslotcount=2
 
 #ifneq ($(TARGET_BUILD_VARIANT),eng)
 #PRODUCT_DEFAULT_PROPERTY_OVERRIDES += ro.adb.secure=1
