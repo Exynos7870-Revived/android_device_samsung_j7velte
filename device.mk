@@ -18,8 +18,7 @@ DEVICE_PATH := device/samsung/j7velte
 
 # Custom mixer_paths
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/audio/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml \
-    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+    $(DEVICE_PATH)/configs/audio/mixer_paths_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
 
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 1280
