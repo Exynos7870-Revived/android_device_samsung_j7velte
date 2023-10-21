@@ -1,6 +1,6 @@
 # DPI
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
+    ro.sf.lcd_density=420
 # Bluetooth workaround:
 # The new CAF code defaults to MCT HAL
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -22,6 +22,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.display-size=1280x720
 
+# Sim Count
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.multisim.simslotcount=2
 

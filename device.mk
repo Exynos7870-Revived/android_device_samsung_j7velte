@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2019-2023 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml
 
 # Launch Android API level
-PRODUCT_SHIPPING_API_LEVEL := 23
+PRODUCT_SHIPPING_API_LEVEL := 24
 
 # Bootanimation
 TARGET_SCREEN_HEIGHT := 1280
@@ -36,7 +36,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
 
-# Bluetooth hal
+# Bluetooth hals
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     android.hardware.bluetooth.audio@2.0-impl \
@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
   android.hardware.bluetooth.a2dp@1.0-impl \
   android.hardware.bluetooth.a2dp@1.0-service
 
-# Tests
+# QSensorTest App
 PRODUCT_PACKAGES_ENG += \
   QSensorTest
 
@@ -76,7 +76,7 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     android.hardware.nfc@1.2.vendor
 
-# Overlays
+# Device Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
@@ -98,9 +98,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     device/samsung/universal7870-common/local-modules/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.4 \
     hostapd \
     libwifi-hal \
     libwpa_client \
@@ -111,15 +112,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-#hostpad
+# Hostapd
 PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd@1.0
 
-#wifi
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.4
-
-#supplicant
+# Wi-Fi Supplicant
 PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.3
 
@@ -127,27 +124,29 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
     $(DEVICE_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
-# Custom mixer_paths OSS
+# OSS mixer configration files
 #PRODUCT_COPY_FILES += \
 #$(LOCAL_PATH)/configs/audio/oss/mixer_paths_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_0.xml
 
-# Inherit from common (audio)
+# OSS Audio fom common-vendor
 #$(call ifnherit-product, device/samsung/universal7870-common/device-oss_audio.mk)
 
-# Custom mixer_paths prebuilt
+# Prebuilt mixer configration files
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/prebuilt/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
     $(DEVICE_PATH)/configs/audio/prebuilt/mixer_gains.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_gains.xml
 
-# Inherit from common
+# Prebuilt audio from common-vendor
 $(call inherit-product, device/samsung/universal7870-common/device-prebuilt_audio.mk)
 
 # Properties
 -include $(DEVICE_PATH)/system_prop.mk
 
-# Inherit from common
+# Common vendor
 $(call inherit-product, device/samsung/universal7870-common/device-common.mk)
 
+# Prebuilt-bsp from common-vendor
 # $(call inherit-product, device/samsung/universal7870-common/device-prebuilt_bsp-vndk.mk)
 
+# Device-Specific Vendor
 $(call inherit-product-if-exists, vendor/samsung/j7velte/j7velte-vendor.mk)

@@ -19,11 +19,11 @@ DEVICE_PATH := device/samsung/j7velte
 # TFA-Audio
 BOARD_USES_EXYNOS7870_TFA_AMP := true
 
-# exynos7870 OSS audio hal
+# OSS Exynos7870 Audio
 TARGET_AUDIOHAL_VARIANT := samsung-exynos7870
 
 # Display
-TARGET_SCREEN_DENSITY := 320
+TARGET_SCREEN_DENSITY := 420
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := j7velte,j7veltedx,j7veltedd,j7veltekk
@@ -52,9 +52,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libbauthserver.so|/vendor/lib/libbauthtzcommon_shim.so
-
-#Bluetooth
-BOARD_HAVE_BLUETOOTH_QCOM := true
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
