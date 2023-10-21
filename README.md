@@ -21,4 +21,4 @@ It was announced and released in July 2017.
 
 ## Device picture
 
-![Samsung J7 Nxt](https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.mobgsm.com%2Fmobile%2Fsamsung-galaxy-j7-nxt-price-in-france&psig=AOvVaw1mLn7TLBKPQp_NxBSPzCoO&ust=1697958186759000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCIiYuKbJhoIDFQAAAAAdAAAAABAE)
+![Samsung J7 Nxt](https://fdn2.mobgsm.com/vv/pics/samsung/samsung-galaxy-j7-nxt-sm-j701fds-1.jpg)
